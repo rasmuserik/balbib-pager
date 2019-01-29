@@ -1,0 +1,22 @@
+{
+  "name": "pager-service",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/veduz/balbib-pager.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/veduz/balbib-pager/issues"
+  },
+  "homepage": "https://github.com/veduz/balbib-pager#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
