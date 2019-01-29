@@ -12,8 +12,9 @@ for(let i = 0; i < 5; ++i) {
 }
 
 app.get('/', (req, res) => {
+  let role;
 	if(req.query && req.query.role) {
-		const role = Math.min(req.query.role | 0, 100)
+		role = Math.min(req.query.role | 0, 100)
 		roles[role].lastPing = Date.now();
 	}
 
@@ -23,7 +24,7 @@ app.get('/', (req, res) => {
 		? {... state, 'state': '0'}
 		: state);
 
-	if(req.query && req.query.role && req.query.newState) {
+	if((typeof role === 'number') && req.query.newState) {
 		roles[role].state = req.query.newState;
 	}
 
