@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
 
 	// reset state if no ping in 10000ms
 	roles = roles.map(state => 
-		(10000 > (Date.now() - state.lastPing))
+		(10000 < (Date.now() - state.lastPing))
 		? {... state, 'state': '0'}
 		: state);
 
